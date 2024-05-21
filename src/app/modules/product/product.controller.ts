@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { ProductServices } from './product.service';
 
-export const createProducts = async (req: Request, res: Response) => {
+export const createProduct = async (req: Request, res: Response) => {
   try {
     const product = req.body;
     const result = await ProductServices.createProductIntoDB(product);
@@ -30,7 +30,7 @@ export const getAllProducts = async (req: Request, res: Response) => {
   }
 };
 
-export const getSingleProduct = async (req: Request, res: Response) => {
+export const getProductById = async (req: Request, res: Response) => {
   try {
     const { productId } = req.params;
     const result = await ProductServices.getSingleProductFromDB(productId);
@@ -45,7 +45,7 @@ export const getSingleProduct = async (req: Request, res: Response) => {
   }
 };
 
-export const updateSingleProduct = async (req: Request, res: Response) => {
+export const updateProduct = async (req: Request, res: Response) => {
   try {
     const updatedProduct = req.body;
     const { productId } = req.params;
@@ -66,8 +66,8 @@ export const updateSingleProduct = async (req: Request, res: Response) => {
 };
 
 export const ProductControllers = {
-  createProducts,
+  createProduct,
   getAllProducts,
-  getSingleProduct,
-  updateSingleProduct,
+  getProductById,
+  updateProduct,
 };
