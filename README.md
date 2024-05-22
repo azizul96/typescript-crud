@@ -19,14 +19,4 @@ npm install
 Create a .env file in the root of your project directory and configure the following environment variables:
 PORT=3000            # Port on which the server will run
 MONGODB_URI=mongodb://localhost:27017/your-database-name  # MongoDB connection URI
-Start MongoDB:
-Ensure that MongoDB is running on your local machine. You can start MongoDB by running:
 
-Copy code
-mongod
-Run the Application:
-Start the application by running the following command:
-
-sql
-Copy code
-npm start
